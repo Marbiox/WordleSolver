@@ -251,7 +251,7 @@ void populateWords(std::map<std::string, int> &list) {
   std::fstream input;
   std::map<char, std::map<int, int>> map;
   input.open("letterProbability.txt");
-  for (;;) {
+  while (true) {
     std::string line;
     getline(input, line);
     if (input.fail())
@@ -297,7 +297,7 @@ void printMenu() {
 }
 
 int getInt(int low, int high, std::string prompt, std::string errorMessage) {
-  for (;;) {
+  while (true) {
     try {
       std::cout << prompt;
       std::string line;
@@ -313,7 +313,7 @@ int getInt(int low, int high, std::string prompt, std::string errorMessage) {
 }
 
 char getChar(std::string prompt, std::string errorMessage) {
-  for (;;) {
+  while (true) {
     try {
       std::cout << prompt;
       std::string line;
